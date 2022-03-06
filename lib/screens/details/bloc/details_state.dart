@@ -1,14 +1,15 @@
 import 'package:equatable/equatable.dart';
+import 'package:fashion_app/models/Product.dart';
 
 class DetailsState extends Equatable {
-  final bool? clickColor;
+  final Product product;
 
-  const DetailsState({this.clickColor});
+  const DetailsState({required this.product});
 
-  DetailsState copyWith({bool? clickColor}) {
-    return DetailsState(clickColor: clickColor ?? this.clickColor);
+  DetailsState copyWith({Product? product}) {
+    return DetailsState(product: product ?? this.product);
   }
 
   @override
-  List<Object?> get props => [clickColor];
+  List<Object?> get props => [product];
 }

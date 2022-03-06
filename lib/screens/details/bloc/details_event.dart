@@ -7,4 +7,7 @@ abstract class DetailsEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class SelectColor extends DetailsEvent {}
+class SelectColor extends DetailsEvent {
+  final int index;
+  const SelectColor({required this.index});
+}
